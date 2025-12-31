@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 ✨ Coquette Celebration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="decor" style="top:10%; left:5%;">🎀</div>
+    <div class="decor" style="top:20%; left:85%;">✨</div>
+    <div class="decor" style="top:80%; left:15%;">🌸</div>
+
+    <section id="page1" class="active">
+        <div class="glass-card">
+            <h1 class="glow">2026</h1>
+            <p class="subtitle">A new chapter is blooming...</p>
+            <div id="countdown" class="timer">00:00:00</div>
+            <button onclick="showPage('page2')">Enter the Magic ✨</button>
+        </div>
+    </section>
+
+    <section id="page2">
+        <div class="glass-card">
+            <h2>Your 2026 Fortune</h2>
+            <div class="jar-container" onclick="revealWish()">
+                <div class="bow">🎀</div>
+                <img src="https://cdn-icons-png.flaticon.com/512/5111/5111186.png" class="jar-img">
+            </div>
+            <p id="wish-display">Tap the jar to see your 2026 destiny...</p>
+            <button onclick="showPage('page3')">Final Surprise 🎁</button>
+        </div>
+    </section>
+
+    <section id="page3">
+        <div class="glass-card">
+            <h1 class="bounce">Happy New Year!</h1>
+            <p>May 2026 be your sparkliest year yet.</p>
+            <div class="confetti">🥳💖🥂✨</div>
+            <button onclick="showPage('page1')">Back to Start</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

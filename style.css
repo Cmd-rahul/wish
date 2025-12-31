@@ -1,0 +1,72 @@
+:root {
+    --pink: #ffb6c1;
+    --soft-white: rgba(255, 255, 255, 0.6);
+}
+
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
+    color: #8e7373;
+    overflow: hidden;
+}
+
+section {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+section.active { display: flex; }
+
+.glass-card {
+    background: var(--soft-white);
+    backdrop-filter: blur(15px);
+    border: 2px solid white;
+    padding: 3rem;
+    border-radius: 40px;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(255, 182, 193, 0.2);
+    width: 80%;
+    max-width: 400px;
+}
+
+/* Floating Elements like the Reel */
+.decor {
+    position: absolute;
+    font-size: 2.5rem;
+    animation: float 5s infinite ease-in-out;
+    z-index: -1;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+@keyframes fadeIn { from { opacity: 0; transform: scale(0.95); } to { opacity: 1; transform: scale(1); } }
+
+.timer { font-size: 2rem; margin: 20px 0; letter-spacing: 3px; font-weight: bold; }
+
+button {
+    background: #ffc1cc;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s;
+    margin-top: 15px;
+}
+
+button:hover { background: #ffabb8; transform: translateY(-3px); }
+
+.jar-img { width: 120px; cursor: pointer; transition: 0.3s; }
+.jar-img:active { transform: scale(0.9) rotate(5deg); }
+
+.bounce { animation: bounce 2s infinite; color: #ff8fa3; }
+@keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
