@@ -37,3 +37,30 @@ function revealWish() {
         display.style.fontWeight = "bold";
     }, 300);
 }
+// Music Play/Pause Function
+function playMusic() {
+    var music = document.getElementById("bgMusic");
+    var btn = document.getElementById("pBtn");
+    if (music.paused) {
+        music.play();
+        btn.innerHTML = "⏸ Pause Vibe";
+    } else {
+        music.pause();
+        btn.innerHTML = "🎵 Play Vibe";
+    }
+}
+
+// Sparkles banane ka logic
+function createSparkle() {
+    const sparkle = document.createElement("div");
+    sparkle.className = "sparkle";
+    sparkle.style.left = Math.random() * 100 + "vw";
+    sparkle.style.top = "100vh"; // Neeche se shuru hoga
+    sparkle.style.animationDuration = Math.random() * 2 + 3 + "s";
+    document.body.appendChild(sparkle);
+
+    setTimeout(() => {
+        sparkle.remove();
+    }, 4000);
+}
+setInterval(createSparkle, 300); // Har 0.3 second mein ek sparkle

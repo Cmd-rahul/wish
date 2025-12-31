@@ -9,6 +9,7 @@ body {
     background: linear-gradient(135deg, #fff5f7 0%, #fce4ec 100%);
     color: #8e7373;
     overflow: hidden;
+
 }
 
 section {
@@ -70,3 +71,24 @@ button:hover { background: #ffabb8; transform: translateY(-3px); }
 
 .bounce { animation: bounce 2s infinite; color: #ff8fa3; }
 @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-15px); } }
+/* Cursor replacement */
+body {
+    cursor: url('https://cur.cursors-4u.net/symbols/sym-9/sym833.cur'), auto !important;
+}
+
+/* Floating Sparkles Animation */
+.sparkle {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ffb6c1;
+    animation: sparkle-float 4s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes sparkle-float {
+    0% { transform: translateY(0) scale(1); opacity: 1; }
+    100% { transform: translateY(-100vh) scale(0); opacity: 0; }
+}

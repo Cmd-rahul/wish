@@ -40,6 +40,14 @@
             <div class="confetti">🥳💖🥂✨</div>
             <button onclick="showPage('page1')">Back to Start</button>
         </div>
+        <div class="music-container" style="position: fixed; bottom: 20px; left: 20px; z-index: 1000;">
+    <audio id="bgMusic" loop>
+        <source src="https://www.chosic.com/wp-content/uploads/2021/04/Lofi-Study-Calm-Peaceful-Lo-fi-Hip-Hop-Background-Music.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="playMusic()" id="pBtn" style="background: rgba(255,255,255,0.7); backdrop-filter: blur(10px); border: 2px solid #ffb6c1; border-radius: 50px; padding: 10px 20px; cursor: pointer; color: #ff8fa3; font-weight: bold;">
+        🎵 Play New Year Vibe
+    </button>
+</div>
     </section>
 
     <script src="script.js"></script>
